@@ -23,6 +23,9 @@ passport.use(passportMiddleware);
 //routes
 app.use(authRoutes);
 app.use('/task', taskRoutes);
+app.get('/', (_req, res) => {
+    res.send('Bienvenido al API Rest de Gestión de Tareas')
+})
 
 // DB Connection
 AppDataSource.initialize().then(() => {
