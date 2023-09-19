@@ -17,7 +17,9 @@ const comparePassword = async (passwordDB: string, password: string): Promise<bo
 }
 
 const createToken = function (user: User) {
-  return jwt.sign({ id: user.id, email: user.email }, config.jwtSecret)
+  return jwt.sign({ id: user.id, email: user.email }, config.jwtSecret, {
+    expiresIn: 3600 // una hora
+  });
 }
 
 export const singUp = async (req: Request, res: Response): Promise<Response> => {
