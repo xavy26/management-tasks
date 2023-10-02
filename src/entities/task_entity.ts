@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Document } from "typeorm"
 import { User } from "./user_entity";
 
 export enum TaskState { 

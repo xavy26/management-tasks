@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, Document } from "typeorm"
 import { Task } from "./task_entity"
 
 export interface IUser extends Document {
